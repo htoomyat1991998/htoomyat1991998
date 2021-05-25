@@ -1,13 +1,17 @@
 get:
   parameters:
-    limit:
+    - name: limit
       in: query
       type: integer
-      description: >
-      
-        [GET] /articles  
-        
+  description: >
+    
+    [GET] /articles  
+  
   responses:
     '200':
-      type: Article[]
+      summary: Array<Article>
+      type: array
+      items:
+        - type: object
+          $ref: '#/components/schemas/Article'
       
