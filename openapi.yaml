@@ -1,34 +1,40 @@
 openapi: 3.0.2
 info:
   version: 1.0.0
-  title: Example.com
-  termsOfService: 'https://example.com/terms/'
+  title: NweOo API
+  termsOfService: 'https://www.nweoo.com/terms-of-services'
   contact:
-    email: contact@example.com
-    url: 'http://example.com/contact'
+    email: nweoo22222@yandex.com
+    url: 'https://www.nweoo.com/about'
   license:
     name: Apache 2.0
     url: 'http://www.apache.org/licenses/LICENSE-2.0.html'
   x-logo:
     url: 'https://apis.guru/openapi-template/logo.png'
   description: >
-    # Your description here
+    သတင်းမှန်များကို အချိန်နဲ့တပြေးညီ သိရှိနိုင်အောင် ဆောင်ရွက်ပေးနေပါတယ်။
+    
+    # စတင်မိတ်ဆက်
+    
+    
 externalDocs:
   description: Find out how to create a GitHub repo for your OpenAPI definition.
   url: 'https://github.com/Rebilly/generator-openapi-repo'
-tags:
-  - name: Echo
-    description: Example echo operations
-  - name: User
-    description: Operations about user
 servers:
-  - url: 'http://example.com/api/v1'
-  - url: 'https://example.com/api/v1'
+  - url: 'https://api.nweoo.com'
 paths:
-    # paths here
+  #     
 components:
   securitySchemes:
-    # security schemes here
-security:
-  - SecretAPIKey: []
-  - JWT: []
+    main_auth:
+      type: oauth2
+      flows:
+        implicit:
+          authorizationUrl: 'http://nwe-oo.firebaseapp.com/__/auth/handler'
+          scopes:
+            'read:users': read users info
+            'write:users': modify or remove users
+    api_key:
+      type: apiKey
+      in: header
+      name: X-Auth-Token
