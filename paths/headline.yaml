@@ -5,4 +5,6 @@ get:
       type: integer
   response:
     '200':
-      type: Headline[]
+      summary: Array<Headline>
+      type: array
+      $ref: '#/components/schemas/Headline'
