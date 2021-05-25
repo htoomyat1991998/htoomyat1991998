@@ -1,14 +1,8 @@
 get:
+  description: number of headlines to retrieve
   parameters:
     - name: limit
       in: query
-      operationId: list-headlines
-      summary: number of headlines to retrieve
-      style: 
-        type: integer
+  operationId: list-headlines
   responses:
     '200':
-      description: Array<Headline>
-      type: array
-      items:
-        $ref: '#/components/schemas/Headline'
