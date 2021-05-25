@@ -6,3 +6,8 @@ get:
   operationId: list-headlines
   responses:
     '200':
+      description: "Success"
+      schema:
+        type: array
+        items:
+          $ref: '#/components/schemas/Headline'
