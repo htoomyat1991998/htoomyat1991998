@@ -1,6 +1,8 @@
-paths:
-  /headlines:
-    get:
-      response:
-        '200':
-          type: string
+get:
+  parameters:
+    limit:
+      in: query
+      type: integer
+  response:
+    '200':
+      type: Headline[]
