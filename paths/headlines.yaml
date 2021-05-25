@@ -11,4 +11,6 @@ get:
     '200':
       summary: Array<Headline>
       type: array
-      $ref: '#/components/schemas/Headline'
+      items:
+        - type: object
+          $ref: '#/components/schemas/Headline'
