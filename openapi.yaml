@@ -12,10 +12,9 @@ info:
   x-logo:
     url: 'https://apis.guru/openapi-template/logo.png'
   description: >
-    သတင်းမှန်များကို အချိန်နဲ့တပြေးညီ သိရှိနိုင်အောင် ဆောင်ရွက်ပေးနေပါတယ်။
+    'သတင်းမှန်များကို အချိန်နဲ့တပြေးညီ သိရှိနိုင်အောင် ဆောင်ရွက်ပေးနေပါတယ်။'
     
-    # စတင်မိတ်ဆက်
-    
+    # Introduction
     
 externalDocs:
   description: Find out how to create a GitHub repo for your OpenAPI definition.
@@ -23,7 +22,10 @@ externalDocs:
 servers:
   - url: 'https://api.nweoo.com'
 paths:
-  #     
+  /articles:
+    $ref: paths/articles.yaml
+  /headlines:
+    $ref: paths/headlines.yaml
 components:
   securitySchemes:
     main_auth:
