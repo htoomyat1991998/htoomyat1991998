@@ -1,8 +1,12 @@
 get:
   parameters:
-    limit:
+    - name: limit
       in: query
       type: integer
+  description: >
+  
+    [GET] /headlines
+  
   response:
     '200':
       summary: Array<Headline>
