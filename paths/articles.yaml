@@ -12,5 +12,4 @@ get:
       description: "Success"
       content:
         json:
-          items:
-            $ref: '#/components/schemas/Article'
+          $ref: '#/components/schemas/Article'
