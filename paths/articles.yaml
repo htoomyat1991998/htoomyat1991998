@@ -1,17 +1,17 @@
 get:
+  summary: number of articles to retrieve
   parameters:
     - name: limit
       in: query
-      type: integer
-  description: >
-    
-    [GET] /articles  
-  
+      schema:
+        type: interger
+        default: 10
+        max: 100
+  operationId: list-articles
   responses:
     '200':
-      summary: Array<Article>
-      type: array
-      items:
-        - type: object
+      description: "Success"
+      schema:
+        type: array
+        items:
           $ref: '#/components/schemas/Article'
-      
