@@ -1,0 +1,6 @@
+paths:
+  /headlines:
+    get:
+      response:
+        '200':
+          type: string
