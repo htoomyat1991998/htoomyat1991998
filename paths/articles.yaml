@@ -12,6 +12,5 @@ get:
       description: "Success"
       content:
         json:
-          type: array
           items:
             $ref: '#/components/schemas/Article'
