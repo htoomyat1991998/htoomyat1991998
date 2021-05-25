@@ -1,5 +1,5 @@
 get:
-  description: number of headlines to retrieve
+  summary: number of headlines to retrieve
   parameters:
     - name: limit
       in: query
@@ -7,7 +7,8 @@ get:
   responses:
     '200':
       description: "Success"
-      schema:
-        type: array
-        items:
-          $ref: '#/components/schemas/Headline'
+      content:
+        schema:
+          type: array
+          items:
+            $ref: '#/components/schemas/Headline'
