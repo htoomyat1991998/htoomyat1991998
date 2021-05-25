@@ -12,4 +12,6 @@ get:
       description: "Success"
       content:
         json:
-          $ref: '#/components/schemas/Article'
+          schema:
+            type: array
+            $ref: '#/components/schemas/Article'
