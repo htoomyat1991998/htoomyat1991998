@@ -4,14 +4,14 @@ get:
     - name: limit
       in: query
       schema:
-        type: interger
+        type: integer
         default: 10
-        max: 100
   operationId: list-articles
   responses:
     '200':
       description: "Success"
-      schema:
-        type: array
-        items:
-          $ref: '#/components/schemas/Article'
+      content:
+        schema:
+          type: array
+          items:
+            $ref: '#/components/schemas/Article'
