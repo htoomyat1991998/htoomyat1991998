@@ -12,6 +12,4 @@ get:
       description: "Success"
       content:
         json:
-          schema:
-            type: array
-            $ref: '#/components/schemas/Article'
+          
