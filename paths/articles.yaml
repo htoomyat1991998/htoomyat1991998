@@ -1,7 +1,13 @@
-paths:
-  /articles:
-    get:
-      response:
-        '200':
-          type: string
-          
+get:
+  parameters:
+    limit:
+      in: query
+      type: integer
+      description: >
+      
+        [GET] /articles  
+        
+  responses:
+    '200':
+      type: Article[]
+      
