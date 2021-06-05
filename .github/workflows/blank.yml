@@ -9,11 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Setup Node.js environment
+      - name: Setup FFMPEG
+        uses: FedericoCarboni/setup-ffmpeg@v1
+      - name: Setup Node.js
         uses: actions/setup-node@v2.1.5
         with:
           node-version: 14.16.0
       - name: Run a multi-line script
         run: |
           date
-          wget 'https://r5---sn-p5qlsnrr.googlevideo.com/videoplayback?expire=1622931779&ei=46S7YPTEMY6g8gTHkbSICg&ip=52.55.68.151&id=o-AAzeFNpHMe-oAR_tsZoG2Z8Ocxa69Xvqv_Ya2oLAwytu&itag=18&source=youtube&requiressl=yes&mh=Rw&mm=31%2C26&mn=sn-p5qlsnrr%2Csn-vgqsknek&ms=au%2Conr&mv=u&mvi=5&pl=22&vprv=1&mime=video%2Fmp4&ns=Mv09gIBlLvz43Dq4KU4YyUYF&gir=yes&clen=102193808&ratebypass=yes&dur=1769.081&lmt=1622908392025684&mt=1622909844&fvip=5&fexp=24001373%2C24007246&c=WEB&txp=5530434&n=cnYP5guQb7iqFD-3H&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIhAI2sOzDhNuKf_P-s2KDacv8rj2w4NR3GwSdL9iHBI8pvAiAbmPaPKHEif2cAjQ20xB6XoWn9BCiVawAbqgEBZlqrrA%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl&lsig=AG3C_xAwRQIhAIWOKynUcWuD6ro0Vq7E5ohOnJzsRYUejDi3TcRYi3wcAiB--6a_wuxFudrFAzrlGlOjXmqd5_lJIBFkVzkp7Q9Ujw%3D%3D'
+          wget 'https://r5---sn-p5qlsnrr.googlevideo.com/videoplayback?expire=1622931779&ei=46S7YPTEMY6g8gTHkbSICg&ip=52.55.68.151&id=o-AAzeFNpHMe-oAR_tsZoG2Z8Ocxa69Xvqv_Ya2oLAwytu&itag=18&source=youtube&requiressl=yes&mh=Rw&mm=31%2C26&mn=sn-p5qlsnrr%2Csn-vgqsknek&ms=au%2Conr&mv=u&mvi=5&pl=22&vprv=1&mime=video%2Fmp4&ns=Mv09gIBlLvz43Dq4KU4YyUYF&gir=yes&clen=102193808&ratebypass=yes&dur=1769.081&lmt=1622908392025684&mt=1622909844&fvip=5&fexp=24001373%2C24007246&c=WEB&txp=5530434&n=cnYP5guQb7iqFD-3H&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cvprv%2Cmime%2Cns%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AOq0QJ8wRQIhAI2sOzDhNuKf_P-s2KDacv8rj2w4NR3GwSdL9iHBI8pvAiAbmPaPKHEif2cAjQ20xB6XoWn9BCiVawAbqgEBZlqrrA%3D%3D&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl&lsig=AG3C_xAwRQIhAIWOKynUcWuD6ro0Vq7E5ohOnJzsRYUejDi3TcRYi3wcAiB--6a_wuxFudrFAzrlGlOjXmqd5_lJIBFkVzkp7Q9Ujw%3D%3D' -O videoplayback.mp4
+          
